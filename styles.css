@@ -276,11 +276,54 @@ li::marker{
     margin: auto;
     
 }
+#consult{
+    color: #525352;
+    background-color: #fbfbfb;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
 .consult-data{
     display: flex;
+    justify-content: space-around;
+    margin: 5% 10%;
+}
+.consult-h {
+    width: 42%;
+    margin: auto;
+}
+.consult-h h3{
+    font-size: 30px;
+    margin-bottom: 3%;
+}
+.profiles p, .profiles h3 {
+    margin: 3% 0;
+}
+.profiles span {
+    background-image: url(assets/hexagon-green.svg);
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    background-position: center;
+    height: 2rem;
+    width: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+.consult-data .profiles div{
+    display: flex;
+    justify-content: center;
+}
+.profiles span:hover{
+    background-color: white;
+    color: #14BF98;
+    background: none;
 }
 #projects {
     text-align: center;
+    padding: 7%;
+    
 }
 .projects-grid {
     display: grid;
@@ -324,6 +367,25 @@ li::marker{
     font-weight: 800;
     
 }
+#projects>div> h2{
+    color: #525352;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    font-size: 30px;
+}
+.projects-options a{
+    background-color: #ebe8e8;
+    color: #525352;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+    margin: 1%;
+}
+.projects-options a:hover{
+    background-color: #14BF98;
+    color: white;
+}
 .project-hover{
     width: 100%;
     height: 100%;
@@ -343,31 +405,102 @@ li::marker{
     opacity: 1;
 }
 .projects-data:hover {
-    /* Zoom in the background image */
-    background-size: 120%;
+    background-size: 130%;
+}
+#about {
+    display: flex;
+    padding: 10% 20% 10% 10%;
+}
+
+#about img {
+    width: 514px;
+    border-radius: 5px;
+}
+.about-data{
+    margin-left: 10%;
+    color: #484A46;
+}
+.about-data h2{
+    font-size: 30px;
+    margin: 5% 0;
+}
+.about-data ul{
+    list-style: square;
+    margin: 4% 0;
+    list-style-position: inside;
+    
+}
+li::marker{
+    color: #14BF98;
+}
+.about-bottom, .about-bottom> div{
+    display: flex;
+}
+.hulk{
+    color: #14BF98;
+    font-size: 50px;
+    margin-right: 5%;
+}
+.hulk+p{
+    margin-top: 8%;
+    font-size: 13px;
 }
 #contact {
     display: flex;
     background-color: #fbfbfb;
     color: #535552;
-    padding: 8% 12%;
+    
 }
 .contact-form {
     display: flex;
     flex-direction: column;
+}
+#contact span {
+    background-image: url(assets/hexagon-green.svg);
+    font-size: 25px;
+    background-repeat: no-repeat;
+    background-size: 3.3rem;
+    background-position: center;
+    height: 3.3rem;
+    width: 3.3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+
+}
+#contact span:hover{
+    background-color: white;
+    color: #14BF98;
+}
+#contact section {
+    display: flex;
+}
+.contact-data{
+    margin: 10% 10%;
 }
 .bottom1 {
     width: 100%;
     height: 292px;
     background-color: #113448;
     color: white;
+    font-size: small;
+}
+.bottom1> div {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10% 15% 0;
+}
+.bottom1>div>div{
+    margin-top: 10%;
+    margin-right: 8%;
 }
 .bottom1 a{
     color: white;
+    text-decoration: underline;
 }
-.bottom1 div {
-    margin: 5rem 2rem;
+.cen-btm{
+    margin: 5% 40%;
 }
