@@ -13,12 +13,18 @@ h1,h2,h3,h4{
     font-style: normal;
 
 }
+html {
+    scroll-behavior: smooth;
+  }
 ul{
     list-style: none;
 }
 a{
     text-decoration: none;
     display: inline-block;
+}
+#hamburger{
+    display: none;
 }
 nav {
     display: flex;
@@ -29,11 +35,22 @@ nav {
     position: absolute;
     top: 0;
     padding: 40px 90px;
+    z-index: 8;
     /* background-color: #113448; */
 }
 nav ul {
     display: flex;
     
+}
+nav ul li:hover, nav ul a:hover{
+    color: #14bf98;
+    
+}
+nav span:hover{
+    background: none;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background-color: white;
+    color: #14BF98;
 }
 .top-logo {
     height: 2.2rem;
@@ -99,6 +116,11 @@ header {
     font-weight: 700;
     border-radius: 6px;
     margin-top: 30px;
+    border: 1px solid #14BF98;
+}
+.green-btn:hover{
+    background:none;
+    color: #14BF98;
 }
  .green-p {
     color: #14BF98;
@@ -181,6 +203,7 @@ header {
     color: #484A46;
     border: 1px solid #ebe8e8;
     border-radius: 5px;
+    position: relative;
 }
 .grid-data ul li{
     list-style-position: inside;
@@ -193,8 +216,14 @@ header {
     display: inline;
 
 }
-#call-me {
-    background-color: #153e52;
+.serv-data .green-btn{
+    position: absolute;
+    bottom: -20px;
+    left: 117px;
+}
+.serv-data h3{
+    margin-bottom: 11%;
+    
 }
 .serv-data> p {
     padding: 0 15%;
@@ -242,40 +271,136 @@ li::marker{
     text-align: center;
     color: #535552;
     padding: 10% 20% 8%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+.testi-data::-webkit-scrollbar {
+    height: 8px;
+    background-color: #aaa;
+    border-radius: 5px;
+  }
+  
+  .testi-data::-webkit-scrollbar-thumb {
+    background-color: green;
+    border-radius: 5px;
+  }
 .testi-h{
-    width: 40%;
+    width: 63%;
+}
+.testi-h h1{
+    font-size: 28px;
+    margin-bottom: 5%;
 }
 .testi-main{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: grid;
+  grid-auto-columns: 33%;
+  grid-auto-flow: column;
 }
 .testi-data img{
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
+    margin-bottom: 7%;
 }
 .testi-data{
-    
-    margin: 3% 5%;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  text-align: center;
+}
+.testi-data p{
+    color: #787976;
+    margin: 2% 0 5%;
 }
 #call-me{
     display: flex;
+    background-color: #153e52;
+    justify-content: space-around;
 }
 .call-left{
     width: 50%;
     color: white;
-    padding: 8% 12%;
+    padding: 8% 8%;
+}
+.call-left h2{
+    font-size: 26px;
+    margin: 4% 0;
+}
+.call-left ul{
+    list-style: square;
+    list-style-position: inside;
+}
+.call-left li {
+    margin: 3% 0;
 }
 .call-right{
-    width: 50%;
+    width: 48%;
     display: flex;
     flex-direction: column;
     margin: auto;
-    
+    color: white;
 }
+.call-right input[type="text"], .call-right select {
+  padding-top: 1.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1.3125rem;
+  border: 1px solid #39728f;
+  border-radius: 0.25rem;
+  width: 70%;
+}
+.call-right input[type="text"], .call-right select{
+    background-color: #39728f;
+    height: 3rem;
+    margin: 2% 0;
+}
+.call-right .call-label{
+    position: relative;
+}
+.call-right .call-label label {
+    position: absolute;
+    left: 1.375rem;
+    top: 1.8125rem;
+    color: white;
+    font-size: 0.87rem;
+    transition: all 300ms;
+  }
+.call-right input[type="text"]:focus+label{
+  font-size: 0.7rem;
+  top: 1.5rem;
+}
+.call-right select{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    height: 3rem;
+    color: white;
+}
+.call-right p a{
+    color: white;
+    text-decoration: underline;
+    margin: 2% 0 3%;
+}
+.call-right button{
+  width: 70%;
+  background-color: #14bf98;
+  color: #fff;
+  border: 2px solid #14bf98;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.call-right button:hover {
+    background-color: #113448;
+    color: #14bf98;
+  }
 #consult{
     color: #525352;
     background-color: #fbfbfb;
@@ -449,11 +574,67 @@ li::marker{
     display: flex;
     background-color: #fbfbfb;
     color: #535552;
-    
+    justify-content: space-around;
+    align-items: center;
+    padding: 10% 10%;
 }
-.contact-form {
-    display: flex;
-    flex-direction: column;
+.contact-form .inputs{
+    position: relative;
+    margin-left: 3%;
+    width: 100%;
+}
+.contact-form input[type="text"], .contact-form textarea{
+padding-top: 1.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1.3125rem;
+  border: 1px solid #dadada;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  color: #787976;
+  width: 100%;
+}
+.contact-form input[type="text"]{
+    height: 3rem;
+}
+.contact-form textarea {
+    height: 8rem;
+}
+.contact-form  label {
+    position: absolute;
+    left: 1.375rem;
+    top: 0.8125rem;
+    color: #787976;
+    font-size: 0.87rem;
+    transition: all 300ms;
+}
+.contact-form input[type="text"]:focus+label, 
+.contact-form textarea:focus+label {
+    font-size: 0.7rem;
+    top: 0.5rem;
+}
+.contact-form .inputs{
+    margin: 3% 0;
+}
+.contact-form a{
+    color: #484A46;
+    text-decoration: underline;
+    margin: 3% 0 5%;
+}
+.contact-form button{
+  width: 100%;
+  background-color: #14bf98;
+  color: #fff;
+  border: 2px solid #14bf98;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.contact-form button:hover{
+    background-color: white;
+    color: #14bf98;
 }
 #contact span {
     background-image: url(assets/hexagon-green.svg);
@@ -471,14 +652,35 @@ li::marker{
 
 }
 #contact span:hover{
-    background-color: white;
+    background: transparent;
     color: #14BF98;
+    /* clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); */
 }
 #contact section {
     display: flex;
 }
 .contact-data{
-    margin: 10% 10%;
+    margin-right: 3%;
+    width: 50%;
+}
+.contact-data h2{
+    font-size: 25px;
+    margin: 2% 0 3%;
+}
+.contact-data p{
+    margin: 3% 0;
+}
+.contact-data p i{
+    color: #14BF98;
+
+}
+.contact-data p a{
+    color: #484A46;
+    text-decoration: underline;
+}
+.contact-data h3{
+    margin: 7% 0 3%;
+    font-size: 22px;
 }
 .bottom1 {
     width: 100%;
@@ -502,5 +704,5 @@ li::marker{
     text-decoration: underline;
 }
 .cen-btm{
-    margin: 5% 40%;
+    margin: 3% 40%;
 }

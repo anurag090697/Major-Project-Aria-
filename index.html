@@ -44,6 +44,9 @@
             ></a>
           </li>
         </ul>
+        <div id="hamburger">
+          <i class="fa fa-bars"></i>
+        </div>
       </nav>
       <header>
         <div class="overlay">
@@ -298,19 +301,22 @@
             to help you decide what service package works.
           </p>
           <ul>
-            <li><p>It's very easy just fill in the form so we can call</p></li>
-            <li>
-              <p>During the call we'll require some info about the company</p>
-            </li>
-            <li>
-              <p>Don't hesitate to email us for any questions or inquiries</p>
-            </li>
+            <li>It's very easy just fill in the form so we can call</li>
+            <li>During the call we'll require some info about the company</li>
+            <li>Don't hesitate to email us for any questions or inquiries</li>
           </ul>
         </div>
         <div class="call-right">
-          <input type="text" />
-          <input type="number" />
-          <input type="email" />
+          <div class="call-label">
+            <input type="text" /> <label for="">Name</label>
+          </div>
+          <div class="call-label">
+            <input type="text" /> <label for="">Phone</label>
+          </div>
+          <div class="call-label">
+            <input type="text" /> <label for="">Email</label>
+          </div>
+
           <select name="" id="">
             <option value="">Interested in...</option>
             <option value="">Off The Ground</option>
@@ -474,14 +480,23 @@
         </div>
 
         <div class="contact-form">
-          <input type="text" />
-          <input type="email" value="" />
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-          <p>
-            <input type="checkbox" /> I agree with Aria's stated
-            <a href="">Privacy Policy</a> and <a href="">Terms Conditions</a>
-          </p>
-          <button>SUBMIT MESSAGE</button>
+          <form action="">
+            <div class="inputs">
+              <input type="text" value="" /> <label for="">Name</label>
+            </div>
+            <div class="inputs">
+              <input type="text" value="" /> <label for="">Email</label>
+            </div>
+            <div class="inputs">
+              <textarea name="" id="" cols="30" rows="10" value=""></textarea>
+              <label for="">Your Message</label>
+            </div>
+            <p>
+              <input type="checkbox" /> I agree with Aria's stated
+              <a href="">Privacy Policy</a> and <a href="">Terms Conditions</a>
+            </p>
+            <button>SUBMIT MESSAGE</button>
+          </form>
         </div>
       </div>
       <div class="bottom1">
