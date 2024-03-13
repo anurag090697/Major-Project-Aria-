@@ -280,6 +280,9 @@ header {
 .hv-gr:hover{
     color: #14BF98;
 }
+.serv-data .green-btn:hover{
+    background-color: white;
+}
 .hv-gr:hover span{
     border: 2px solid #14BF98;
     background-color: #14BF98;
@@ -349,6 +352,9 @@ header {
     margin: 14% 10% 5% 16%;
     color: #737671;
     font-size: 15px;
+}
+.details-icons h2:hover{
+    color: #14BF98;
 }
 .details2-text{
     margin-right: 12%;
@@ -797,6 +803,7 @@ padding-top: 1.25rem;
 }
 .cen-btm{
     /* margin: 3% 40%; */
+    margin-top: 2%;
     text-align: center;
 }
 @media screen and (max-width:1310px) {
@@ -837,8 +844,47 @@ nav ul{
     .bottom1{
         height: fit-content;
     }
+    /* .projects-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        
+    } */
 }
 @media screen and (max-width:880px) {
+    .testi-main {
+        display: block;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        grid-auto-rows: 20%;
+        grid-auto-flow: row;
+    }
+    .testi-h {
+        width: 90%;
+    }
+    .intro-text {
+        width: 100%;
+        margin: 5%;
+    }
+    .overlay .text{
+        width: 80% ;
+    }
+    .overlay .text h1 {
+        font-size: 44px;
+    }
+    #intro-1{
+        flex-direction: column;
+    }
+    .intro-icons span{
+        margin: auto;
+    }
+    .intro-icons{
+        flex-direction: column;
+        text-align: center;
+    }
+    .text-h > h2 {
+        padding: 0 13%;
+        /* margin-top: 1%; */
+    }
     #call-me{
         flex-direction: column;
     }
@@ -855,12 +901,12 @@ nav ul{
     grid-template-rows: 1fr 1fr 1fr;
 }
 #about img{
-    margin: 3% 30%;
+    margin: 3% 2%;
 }
 .projects-grid {
     
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     /* margin: 2% 14%; */
 }
 .consult-data{
@@ -888,19 +934,37 @@ nav ul{
 }
 
 }
-@media screen and (max-width: 320px){
-    #hamburger{
-        display: block;
+@media screen and (max-width: 420px){
+    .hulk{
+        margin-right: 0;
     }
-    nav ul{
-        display: none;
+    .contact-data {
+        margin-right: 0%;
+        width: 81%;
     }
-    header{
-        width: 100%;
+    .contact-form {
+        padding: 6% 7%;
+    }
+    .contact-form a {
+        margin: 0% 0 4%;
+    }
+    /* .contact-form p{
+        text-align: center;
+    } */
+    .projects-grid{
+        grid-template-columns: 1fr;
+    }
+    .call-right p a {
+        
+        margin: 0% 0 3%;
+    }
+    .details-icons{
+        text-align: center;
+        margin: 0% 0% 5% 3%;
     }
     #about {
         display: flex;
-        padding: 10% 20% 10% 10%;
+        padding: 8% 0% 8% 8%;
         flex-direction: column;
     }
     .about-data h2{
