@@ -21,6 +21,7 @@ ul{
 }
 .container{
     position: relative;
+    width: 100%;
 }
 a{
     text-decoration: none;
@@ -38,7 +39,7 @@ nav {
     position: fixed;
     top: 0;
     padding: 40px 90px;
-    
+    z-index: 8;
 }
 .top1{
     top: 0;
@@ -228,7 +229,8 @@ header {
 .serv-data .green-btn{
     position: absolute;
     bottom: -20px;
-    left: 117px;
+    left: 30%;
+    right: 30%;
 }
 .serv-data h3{
     margin-bottom: 11%;
@@ -794,5 +796,121 @@ padding-top: 1.25rem;
     text-decoration: underline;
 }
 .cen-btm{
-    margin: 3% 40%;
+    /* margin: 3% 40%; */
+    text-align: center;
+}
+@media screen and (max-width:1310px) {
+    .services-grid {
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 6%;
+        row-gap: 5%;
+        margin-top: 5%;
+    }
+   
+   #hamburger{
+    display: block;
+    color: white;
+}
+nav ul{
+    display: none;
+}
+#about{
+    flex-direction: column;
+    padding-left: 4%;
+    padding-right: 30%;
+    align-items: center;
+}
+.bottom1>div{
+    margin: 0 3% 0;
+}
+.cen-btm {
+    margin: 2% 38%;
+}
+}
+@media screen and (max-width:740px){
+    .bottom1>div{
+        flex-direction: column;
+        text-align: center;
+    }
+    .bottom1{
+        height: fit-content;
+    }
+}
+@media screen and (max-width:880px) {
+    #call-me{
+        flex-direction: column;
+    }
+    .call-left{
+        width: 100%;
+    }
+    .call-right{
+        width: 100%;
+        margin-left: 8%;
+        padding-bottom: 8%;
+    }
+ .services-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+#about img{
+    margin: 3% 30%;
+}
+.projects-grid {
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* margin: 2% 14%; */
+}
+.consult-data{
+    flex-direction: column;
+    margin: 2% 0;
+}
+.profiles p, .profiles h3 {
+    margin: 0 0;
+}
+#services{
+    margin-bottom: 25%;
+}
+.details img {
+    width: 100%;
+}
+.no-name .details {
+    flex-direction: column;
+    .details-data1, .details-data2{
+        margin: 5% 2% 30px;
+    }
+}
+#contact{
+    flex-direction: column;
+    padding: 10% 0;
+}
+
+}
+@media screen and (max-width: 320px){
+    #hamburger{
+        display: block;
+    }
+    nav ul{
+        display: none;
+    }
+    header{
+        width: 100%;
+    }
+    #about {
+        display: flex;
+        padding: 10% 20% 10% 10%;
+        flex-direction: column;
+    }
+    .about-data h2{
+        font-size: 28px;
+        margin: 0 0;
+    }
+    .about-data{
+        margin-left: 1%;
+    }
+    .bottom1>div {
+        
+    }
 }
